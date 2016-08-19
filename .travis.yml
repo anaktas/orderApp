@@ -1,8 +1,9 @@
 language: go
-
+sudo: false
 go:
   - 1.6
   - tip
-
+before_script:
+  - go vet ./...
 install:
   - go get github.com/go-sql-driver/mysql
